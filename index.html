@@ -2,17 +2,34 @@
 <html>
     <head>
         
-       <script type="text/javascript">
+      <head>
+  <title>Password Entry</title>
+  <script type="text/javascript">
     var password;
-    var pass1 = "apollo";
+    var pass1 = "apollogames12345";
 
-    password = prompt('Enter Password', '');
-    if (password === pass1) {
-        alert('Correct Password! Click OK to Enter!');
-    } else {
-        window.location = "https://youareanidiot.gg/";
+    function handleKeyPress(event) {
+      var input = document.getElementById("passwordInput");
+      var dotPassword = document.getElementById("dotPassword");
+
+      if (event.key === "Enter") {
+        password = input.value;
+        if (password === pass1) {
+          alert('Correct Password! Click OK to Enter!');
+        } else {
+          window.location = "https://youareanidiot.gg/";
+        }
+      } else {
+        dotPassword.value += "•";
+      }
     }
-</script>
+  </script>
+</head>
+<body>
+  <label for="passwordInput">Enter Password:</label>
+  <input type="password" id="passwordInput" onkeypress="handleKeyPress(event)"/>
+  <input type="text" id="dotPassword" style="display:none" disabled/>
+</body>
         
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
