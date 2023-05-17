@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
+           
     <head>
-        
-      <head>
   <title>Password Entry</title>
   <script type="text/javascript">
-    var password;
-    var pass1 = "apollogames12345";
+    var pass1 = "apollo";
 
-    function handleKeyPress(event) {
-      var input = document.getElementById("passwordInput");
-      var dotPassword = document.getElementById("dotPassword");
+    function handlePassword() {
+      var password = prompt('Enter Password', '');
 
-      if (event.key === "Enter") {
-        password = input.value;
-        if (password === pass1) {
-          alert('Correct Password! Click OK to Enter!');
-        } else {
-          window.location = "https://youareanidiot.gg/";
-        }
+      if (password === pass1) {
+        alert('Correct Password! Click OK to Enter!');
+        // Place your code that should execute after password verification here
       } else {
-        dotPassword.value += "•";
+        window.location = "https://youareanidiot.gg/";
       }
     }
   </script>
 </head>
-<body>
-  <label for="passwordInput">Enter Password:</label>
-  <input type="password" id="passwordInput" onkeypress="handleKeyPress(event)"/>
-  <input type="text" id="dotPassword" style="display:none" disabled/>
-</body>
-        
+<body onload="handlePassword()">
+
+        <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <title>New Tab</title>
@@ -41,7 +31,7 @@
         <script src="https://kit.fontawesome.com/d0c5025972.js" crossorigin="anonymous"></script>
         <meta name="theme-color" content="var(--bgColor)">
     </head>
-    <body>
+    
             <!--Page Content Below-->
         <img id="userPhoto" class="animated rubberBand fast" src="icons/waves.png" alt="Your Name's Photo">
         <h1 class="animated jello game_title">Apollo's hottest games</h1>
