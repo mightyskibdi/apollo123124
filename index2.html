@@ -1046,10 +1046,8 @@
         $(document).ready(function() {
             var isLoggedIn = getCookie('isLoggedIn');
             if (!isLoggedIn) {
-                setTimeout(function() {
-                    window.location.href = 'index.html'; // Redirect to the login page
-                }, 2000); // Delay of 2 seconds before redirecting
-            }  
+                window.location.href = 'index2.html'; // Redirect to the login page
+            }
 
             function getCookie(name) {
                 var nameEQ = name + '=';
