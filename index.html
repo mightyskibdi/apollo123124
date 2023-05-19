@@ -11,7 +11,7 @@
       var usernameCookie = getCookie('username');
       var passwordCookie = getCookie('password');
 
-      if (usernameCookie === 'lberry' && passwordCookie === '12345') {
+      if (usernameCookie === 'lberry', 'apolo' && passwordCookie === '12345') {
         setCookie('isLoggedIn', 'true', 1); // Set expiration to 1 day
         window.location.href = 'index2.html'; // Redirect to the main page
       }
@@ -21,7 +21,7 @@
         var username = $('input[type="text"]').val();
         var password = $('input[type="password"]').val();
 
-        if (username === 'lberry' && password === '12345') {
+        if (username === 'lberry', 'apolo' && password === '12345') {
           setCookie('username', username, 1); // Set expiration to 1 day
           setCookie('password', password, 1); // Set expiration to 1 day
           setCookie('isLoggedIn', 'true', 1); // Set expiration to 1 day
